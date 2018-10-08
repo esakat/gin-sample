@@ -26,13 +26,13 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run:
-        name: 依存ライブラリの取得
-        command: go get -v -t -d ./...
+          name: 依存ライブラリの取得
+          command: go get -v -t -d ./...
       - run:
-        name: junit-reportの取得
-        command: go get -u github.com/jstemmer/go-junit-report
+          name: junit-reportの取得
+          command: go get -u github.com/jstemmer/go-junit-report
       - run:
-        name: テスト実行
-        command: go test github.com/esakat/gin-sample/... -v  2>&1 | go-junit-report -set-exit-code=true > ${TEST_RESULTS}/report.xml
+          name: テスト実行
+          command: go test github.com/esakat/gin-sample/... -v  2>&1 | go-junit-report -set-exit-code=true > ${TEST_RESULTS}/report.xml
       - store_test_results: #テスト結果の格納
-        path: /tmp/test-results
+          path: /tmp/test-results
