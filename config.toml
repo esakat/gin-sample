@@ -1,0 +1,7 @@
+[DB]
+driver = "postgres"
+host = "127.0.0.1"
+user = "go"
+password = "go"
+dbname = "go"
+sslmode = "disable"
