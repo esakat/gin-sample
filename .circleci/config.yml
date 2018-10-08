@@ -26,6 +26,9 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run:
+          name: テスト結果の保存場所作成
+          command: mkdir -p $TEST_RESULTS
+      - run:
           name: 依存ライブラリの取得
           command: go get -v -t -d ./...
       - run:
