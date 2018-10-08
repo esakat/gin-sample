@@ -9,7 +9,7 @@ func Test_NewUser_Success(t *testing.T) {
 		Pass: "akase",
 	}
 
-	actual := NewUser("akase", "akase")
+	actual := NewUser("akase", "akamd")
 	if actual != expect {
 		t.Fatalf("failed test acutal_name=%#v, actual_pass=%#v", actual.Name, actual.Pass)
 	}
