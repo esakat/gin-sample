@@ -36,6 +36,7 @@ jobs:
           command: go get -u github.com/jstemmer/go-junit-report
       - run:
           name: テスト実行
-          command: go test github.com/esakat/gin-sample/... -v  2>&1 | go-junit-report -set-exit-code=true > ${TEST_RESULTS}/report.xml
+          #command: go test github.com/esakat/gin-sample/... -v  2>&1 | go-junit-report -set-exit-code=true > ${TEST_RESULTS}/report.xml
+          command: go test ./... -v
       - store_test_results: #テスト結果の格納
           path: /tmp/test-results
